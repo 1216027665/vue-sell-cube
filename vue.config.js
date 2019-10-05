@@ -1,7 +1,13 @@
+const path = require('path')
 const appData = require('./data.json')
 const seller = appData.seller
 const goods = appData.goods
 const ratings = appData.ratings
+
+// __dirname：vue.config.js所在目录的绝对路径，即项目的目录
+function resolve(dir) {
+  return path.join(__dirname, dir)
+}
 
 module.exports = {
   css: {
@@ -41,5 +47,10 @@ module.exports = {
         })
       })
     }
+  },
+  chainWebpack (config) {
+    config.resolve.alias
+      .set('components', resolve('src/components'))
+      .set('common', resolve('src/common'))
   }
 }
