@@ -36,6 +36,7 @@
   import SupportIco from 'components/support-ico/support-ico'
 
   export default {
+    name: 'v-header',
     props: {
       seller: {
         type: Object,
