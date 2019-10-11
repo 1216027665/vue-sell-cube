@@ -224,6 +224,7 @@
       .text
         flex: 1
         position: relative
+        font-size: 12px
       .num
         position: absolute
         right: -8px
